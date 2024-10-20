@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ejumboT2.MainPage">
+
+    <StackLayout Padding="20">
+
+        <Label Text="Nombre del Estudiante" />
+        <Entry x:Name="NombreEntry" Placeholder="Ingrese su nombre" />
+
+        <Label Text="Seleccione un Compañero" />
+        <Picker x:Name="CompaneroPicker" Title="Compañeros">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Compañero 1</x:String>
+                    <x:String>Compañero 2</x:String>
+                    <x:String>Compañero 3</x:String>
+                    <x:String>Compañero 4</x:String>
+                    <x:String>Compañero 5</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="Nota Seguimiento 1:" />
+        <Entry x:Name="Seguimiento1Entry" Placeholder="Sobre 10" Keyboard="Numeric" />
+
+        <Label Text="Examen 1:" />
+        <Entry x:Name="Examen1Entry" Placeholder="Sobre 10" Keyboard="Numeric" />
+
+        <Label Text="Nota Seguimiento 2:" />
+        <Entry x:Name="Seguimiento2Entry" Placeholder="Sobre 10" Keyboard="Numeric" />
+
+        <Label Text="Examen 2:" />
+        <Entry x:Name="Examen2Entry" Placeholder="Sobre 10" Keyboard="Numeric" />
+
+        <Label Text="Fecha:" />
+        <DatePicker x:Name="FechaPicker" />
+
+        <Button Text="Calcular Nota Final" Clicked="OnCalcularNotaFinalClicked" />
+    </StackLayout>
+
+</ContentPage>
+
